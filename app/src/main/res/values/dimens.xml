@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_space">100dp</dimen>
+    <dimen name="medium_margin">16dp</dimen>
+    <dimen name="minimum_margin">2dp</dimen>
+    <dimen name="top_space">56dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="small_font_size">12sp</dimen>
+    <dimen name="large_font_size">40sp</dimen>
+    <dimen name="medium_font_size">14sp</dimen>
+</resources>
