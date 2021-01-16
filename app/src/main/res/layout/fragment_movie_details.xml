@@ -270,5 +270,12 @@
             app:layout_constraintEnd_toEndOf="@id/img_person_four"
             app:layout_constraintStart_toStartOf="@id/img_person_four"
             app:layout_constraintTop_toBottomOf="@id/img_person_four" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="20dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
