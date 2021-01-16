@@ -12,5 +12,10 @@
     <string name="demo_name_person_two">Chris Evans</string>
     <string name="demo_name_person_three">Mark Ruffalo</string>
     <string name="demo_name_person_four">Chris Hemsworth</string>
+    <string name="movies_list">Movies list</string>
     <string name="button">Button</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="avengers_end_game">Avengers: End Game</string>
+    <string name="_137_min">137 MIN</string>
 </resources>

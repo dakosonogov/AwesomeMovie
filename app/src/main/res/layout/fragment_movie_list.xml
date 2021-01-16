@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_left_global"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/medium_margin_v2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_movies_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/padding_for_icon"
+        android:layout_marginTop="@dimen/margin_top_movies_list"
+        android:textColor="@color/white"
+        android:text="@string/movies_list"
+        android:textStyle="bold"
+        android:textSize="@dimen/medium_font_size"
+        app:layout_constraintBottom_toTopOf="@id/card_movie"
+        app:layout_constraintStart_toStartOf="@id/gl_left_global"
+        app:layout_constraintTop_toTopOf="parent"
+        app:drawableStartCompat="@drawable/ic_combined_shape" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_movie_card"
+        app:cardBackgroundColor="@color/card_movie_background"
+        app:cardCornerRadius="@dimen/card_corner_radius_movie_card"
+        app:layout_constraintStart_toStartOf="@id/gl_left_global"
+        app:layout_constraintTop_toBottomOf="@id/tv_movies_list"
+        app:strokeColor="@color/stroke_color_movie_card"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/minimum_margin"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/minimum_margin"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/minimum_margin" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="48dp" />
+
+            <ImageView
+                android:id="@+id/movie_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/gl_bottom"
+                app:layout_constraintEnd_toEndOf="@id/gl_right"
+                app:layout_constraintStart_toStartOf="@id/gl_left"
+                app:layout_constraintTop_toTopOf="@id/gl_top"
+                app:srcCompat="@drawable/demo_avengers" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/avengers_mask"
+                app:layout_constraintBottom_toBottomOf="@id/movie_banner"
+                app:layout_constraintEnd_toEndOf="@id/movie_banner"
+                app:layout_constraintStart_toStartOf="@id/movie_banner"
+                app:layout_constraintTop_toTopOf="@id/movie_banner" />
+
+            <TextView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/age_rating_bg"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/demo_age_rating"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_font_size"
+                app:layout_constraintStart_toStartOf="@id/gl_left"
+                app:layout_constraintTop_toTopOf="@id/gl_top" />
+
+            <ImageView
+                android:id="@+id/iv_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="6dp"
+                android:src="@drawable/ic_like"
+                app:layout_constraintEnd_toStartOf="@id/gl_right"
+                app:layout_constraintTop_toTopOf="@id/gl_top" />
+
+            <TextView
+                android:id="@+id/tv_genre_tags"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="22dp"
+                android:text="@string/demo_genre_tags"
+                android:textColor="@color/radical_red"
+                android:textSize="@dimen/extra_small_font_size"
+                app:layout_constraintBottom_toBottomOf="@id/gl_bottom"
+                app:layout_constraintEnd_toStartOf="@id/gl_right"
+                app:layout_constraintStart_toStartOf="@id/gl_left" />
+
+            <RatingBar
+                android:id="@+id/rb_movie_rating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="4dp"
+                android:numStars="5"
+                android:progressBackgroundTint="@color/grey"
+                android:rating="4"
+                android:theme="@style/CustomRatingBar"
+                app:layout_constraintEnd_toStartOf="@id/tv_reviews"
+                app:layout_constraintStart_toEndOf="@id/gl_left"
+                app:layout_constraintTop_toBottomOf="@+id/tv_genre_tags" />
+
+            <TextView
+                android:id="@+id/tv_reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin"
+                android:text="@string/demo_reviews"
+                android:textAllCaps="true"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/extra_small_font_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/rb_movie_rating"
+                app:layout_constraintStart_toEndOf="@id/rb_movie_rating"
+                app:layout_constraintTop_toTopOf="@id/rb_movie_rating" />
+
+            <TextView
+                android:id="@+id/tv_demo_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tv_card_movie_margin"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="@dimen/tv_card_movie_margin"
+                android:text="@string/avengers_end_game"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium_font_size"
+                app:layout_constraintEnd_toStartOf="@+id/gl_right"
+                app:layout_constraintStart_toEndOf="@id/gl_left"
+                app:layout_constraintTop_toBottomOf="@id/tv_reviews" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/tv_card_movie_margin"
+                android:layout_marginEnd="@dimen/tv_card_movie_margin"
+                android:text="@string/_137_min"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/extra_small_font_size"
+                app:layout_constraintEnd_toStartOf="@+id/gl_right"
+                app:layout_constraintStart_toEndOf="@id/gl_left"
+                app:layout_constraintTop_toBottomOf="@id/tv_demo_title" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,11 +2,18 @@
 <resources>
     <dimen name="bottom_space">100dp</dimen>
     <dimen name="medium_margin_v1">14dp</dimen>
+    <dimen name="medium_margin_v2">12dp</dimen>
     <dimen name="medium_margin">16dp</dimen>
     <dimen name="minimum_margin">2dp</dimen>
     <dimen name="top_space">56dp</dimen>
     <dimen name="small_margin">8dp</dimen>
     <dimen name="small_font_size">12sp</dimen>
+    <dimen name="extra_small_font_size">8sp</dimen>
     <dimen name="large_font_size">40sp</dimen>
     <dimen name="medium_font_size">14sp</dimen>
+    <dimen name="padding_for_icon">8dp</dimen>
+    <dimen name="margin_top_movies_list">55dp</dimen>
+    <dimen name="margin_top_movie_card">27dp</dimen>
+    <dimen name="card_corner_radius_movie_card">8dp</dimen>
+    <dimen name="tv_card_movie_margin">6dp</dimen>
 </resources>
